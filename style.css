@@ -1,0 +1,172 @@
+body{
+	margin: 0;
+}
+
+.logo{
+	/*float: left;*/
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	transform: translateY(-50%);
+}
+
+.logo img{
+	width: 140px;
+	height: 45px;
+}
+
+header nav{
+	float: right;
+}
+
+/* styles de la nav */
+
+nav a{
+	/*color: currentColor;*/
+	color: white;
+	text-decoration: none;
+	padding: 1.5em 1em;
+	display: inline-block;
+}
+
+nav li{
+	/*display: inline-block;*/ /*Attention white space*/
+	float: left;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+header{
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+/*Controler les flottants*/
+.clearfix::after{
+	content: '';
+	clear: both;
+	display: table;
+}
+
+/*Controle de la marge des enfants*/
+.clearfix::before{
+	content: '';
+	display: table;
+}
+
+
+.container{
+	width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#section1{
+	height: 580px;
+	background-color: rgb(80, 155, 245);
+	background-image: url('images/hero-image.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: auto 85%;
+}
+
+#section1 .container{
+	height: 100%;
+}
+
+#section1 small{
+	position: absolute;
+	/*left: 15px;*/ /*Valeur du padding du caontainer*/
+	bottom: 0;
+}
+
+.vertically-centered{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+}
+
+.benefit{
+	float: left;
+	margin-right: 20px;
+	width: calc((100% - 60px) / 4);
+	text-align: center;
+}
+
+.benefit:last-child{
+	margin-right: 0;
+}
+
+.benefit img{
+	width: 60%;
+}
+
+.container > h1{
+	text-align: center
+}
+
+main > section{
+	padding: 35px 0;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.offer{
+	float: left;
+	margin-right: 20px;
+	width: calc((100% - 40px) / 3);
+}
+
+.offer:last-child{
+	margin-right: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap');
+
+html{
+	font-family: 'Lato', sans-serif;
+}
+
+.cta-button{
+	color: white;
+	background-color: #1DB954;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 1em 2em;
+	border-radius: 500px;
+	display: inline-block;
+}
+
+.offer ul{
+	/*list-style-image: url('images/arrow.svg');*/
+	list-style: none;
+}
+
+.offer li::before{
+	content: '';
+	width: 15px;
+	height: 15px;
+	background-image: url('images/arrow.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 0;
+	left: -25px;
+}
+
+.offer li{
+	position: relative;
+}
